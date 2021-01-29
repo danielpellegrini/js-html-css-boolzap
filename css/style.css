@@ -1,0 +1,139 @@
+/* UTILITIES CLASSES */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #fff;
+}
+
+
+/* END UTILITIES CLASSES */
+
+
+#wrapper {
+  background-color: #DADBD5;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+/* MAIN CONTAINER */
+main {
+  width: 80%;
+  height: 95%;
+  margin: 0 auto;
+  background: #ccc;
+}
+/* END MAIN CONTAINER */
+
+
+/* LEFT NAV */
+
+.left-nav {
+  background-color: #FFFFFF;
+  float: left;
+  width: 30%;
+  height: 100%;
+  overflow-y: hidden;
+}
+/* END LEFT NAV */
+
+.content {
+  background-image: url(../img/mine.jpg);
+  background-repeat: repeat;
+  background-color: #E5DCD5;
+  /* float: left; */
+  width: calc(100% - 30%);
+  height: calc(100% - 80px);
+  overflow-y: auto;
+}
+
+/* TOP NAV */
+.top-nav {
+  width: 56%;
+  height: 80px;
+  background-color: #EAEAEA;
+  position: fixed;
+  text-align: right;
+  line-height: 80px;
+  /* border: 1px solid black; */
+}
+
+.top-nav-left {
+  width: calc(100% - 76%);
+  height: 80px;
+  background-color: #EAEAEA;
+  position: fixed;
+  text-align: right;
+  line-height: 80px;
+  border-right: 2px solid red;
+}
+/* END TOP NAV */
+
+
+/* MAIN CONTENT  */
+/* END MAIN CONTENT  */
+
+
+
+/* TEXT BAR */
+
+.bottom-box {
+  display: flex;
+}
+
+footer {
+  width: 56%;
+  height: 80px;
+  background-color: #F3EEEA;
+  position: fixed;
+  /* border: 1px solid black; */
+}
+/* END TEXT BAR */
+
+/* --- MEDIA QUERIES --- */
+
+@media screen and (max-width: 992px) {
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+  max-width: calc(100% / 6 - 5px);
+  height: auto;
+  margin-right: 5px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+  max-width: calc(100% / 4 - 5px);
+  height: auto;
+  margin-right: 5px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+  max-width: calc(100% / 2 - 5px);
+  height: auto;
+  margin-right: 5px;
+  }
+
+}
