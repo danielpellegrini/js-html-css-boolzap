@@ -1,20 +1,17 @@
 /* UTILITIES CLASSES */
-
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
-  color: #fff;
+  overflow-y: hidden;
 }
 
-
 /* END UTILITIES CLASSES */
-
-
 #wrapper {
   background-color: #DADBD5;
+  color: inherit;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -24,78 +21,132 @@
 main {
   width: 80%;
   height: 95%;
-  margin: 0 auto;
-  background: #ccc;
+  margin: 20px auto;
 }
+
 /* END MAIN CONTAINER */
 
-
 /* LEFT NAV */
-
 .left-nav {
+  display: flex;
+  flex-flow: column;
   background-color: #FFFFFF;
+  color: inherit;
   float: left;
   width: 30%;
   height: 100%;
   overflow-y: hidden;
+  border-right: .2em solid black;
 }
+
+.top-nav-left {
+  height: 100px;
+  background-color: #EAEAEA;
+  color: inherit;
+  line-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+
+.user-name>img {
+  height: 4em;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.icons {
+  padding: 0 20px;
+  font-size: 1.5em;
+}
+
+.icons>i {
+  padding: 0 10px;
+  color: #B1B1B1;
+}
+
+.top-nav-left:nth-of-type(2) {
+  background-color: #8EDAFC;
+  color: inherit;
+}
+
+.top-nav-left:nth-of-type(3) {
+  background-color: #FBF8FB;
+  color: inherit;
+  height: 50px;
+}
+
 /* END LEFT NAV */
 
-.content {
+/* MESSAGES SECTION */
+#content {
   background-image: url(../img/mine.jpg);
   background-repeat: repeat;
   background-color: #E5DCD5;
-  /* float: left; */
-  width: calc(100% - 30%);
-  height: calc(100% - 80px);
+  color: inherit;
+  height: calc(100% - 100px);
   overflow-y: auto;
 }
+
+.messages-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sent-messages {
+  background-color: #DBF8BE;
+  width: 20%;
+  border-radius: 10px;
+  text-align: left;
+  margin-right: 150px;
+  margin-top: 120px;
+  align-self: flex-end;
+}
+
+.received-messages {
+  background-color: #FFFFFF;
+  width: 20%;
+  border-radius: 10px;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+
+
+/* END MESSAGES SECTION */
 
 /* TOP NAV */
 .top-nav {
   width: 56%;
-  height: 80px;
+  height: 100px;
   background-color: #EAEAEA;
+  color: inherit;
   position: fixed;
   text-align: right;
-  line-height: 80px;
+  line-height: 100px;
   /* border: 1px solid black; */
 }
 
-.top-nav-left {
-  width: calc(100% - 76%);
-  height: 80px;
-  background-color: #EAEAEA;
-  position: fixed;
-  text-align: right;
-  line-height: 80px;
-  border-right: 2px solid red;
-}
 /* END TOP NAV */
-
 
 /* MAIN CONTENT  */
 /* END MAIN CONTENT  */
 
-
-
 /* TEXT BAR */
-
 .bottom-box {
   display: flex;
 }
 
 footer {
   width: 56%;
-  height: 80px;
+  height: 100px;
   background-color: #F3EEEA;
+  color: inherit;
   position: fixed;
   /* border: 1px solid black; */
 }
+
 /* END TEXT BAR */
-
 /* --- MEDIA QUERIES --- */
-
 @media screen and (max-width: 992px) {
   .items-container {
     display: flex;
@@ -103,11 +154,10 @@ footer {
   }
 
   .item {
-  max-width: calc(100% / 6 - 5px);
-  height: auto;
-  margin-right: 5px;
+    max-width: calc(100% / 6 - 5px);
+    height: auto;
+    margin-right: 5px;
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -117,11 +167,10 @@ footer {
   }
 
   .item {
-  max-width: calc(100% / 4 - 5px);
-  height: auto;
-  margin-right: 5px;
+    max-width: calc(100% / 4 - 5px);
+    height: auto;
+    margin-right: 5px;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -131,9 +180,8 @@ footer {
   }
 
   .item {
-  max-width: calc(100% / 2 - 5px);
-  height: auto;
-  margin-right: 5px;
+    max-width: calc(100% / 2 - 5px);
+    height: auto;
+    margin-right: 5px;
   }
-
 }
