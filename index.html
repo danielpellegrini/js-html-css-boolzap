@@ -4,17 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <title>Boolzapp</title>
 </head>
 
 <body>
+
   <!-- wrapper -->
-  <div id="wrapper">
+  <div class="wrapper" id="app">
+    <div class="beyond-top"></div>
     <!-- main container -->
     <main>
 
@@ -38,13 +40,35 @@
 
         <!-- messages notifies -->
         <div class="top-nav-left">
+          <div class="icon-notify-container">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+          <div class="notify-container">
+            <span>Get Notified of New Messages</span>
+            <a href="#"><span>Turn on desktop notifications</span></a>
+          </div>
         </div>
         <!-- end messages notifies -->
 
         <!-- search chat -->
         <div class="top-nav-left">
+          <div class="search-field">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search or start new chat" value="">
+          </div>
         </div>
         <!-- end search chat -->
+
+        <!-- contacts -->
+        <div class="middle-nav-left">
+          <div class="contacts-container" v-for="item in contacts">
+            <div class="contacts-content">
+              <img :src="'img/avatar' + item.avatar + '.jpg'">
+              <span>{{item.name}}</span>
+            </div>
+          </div>
+        </div>
+        <!-- end contacts -->
 
       </nav>
       <!-- end left nav -->
@@ -54,14 +78,24 @@
 
         <!-- top nav -->
         <div class="top-nav">
+
+          <div class="middle-nav-left">
+            <div class="contacts-container">
+              <div class="contacts-content">
+                <img :src="'img/avatar' + contacts[0].avatar + '.jpg'">
+                <span>{{contacts[0].name}}</span>
+              </div>
+            </div>
+          </div>
+
+
           <div class="icons">
-            <i class="fas fa-circle-notch"></i>
-            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
         <!-- end top nav -->
-
 
         <!-- sent and received messages -->
         <div class="messages-section">
@@ -73,29 +107,29 @@
             <p>MESSAGE 2</p><br>
           </div>
           <div class="sent-messages">
-          <p>MESSAGE 3</p><br>
-        </div>
-        <div class="received-messages">
-          <p>MESSAGE 4</p><br>
-        </div>
-        <div class="sent-messages">
-          <p>MESSAGE 5</p><br>
-        </div>
-        <div class="received-messages">
-          <p>MESSAGE 6</p><br>
-        </div>
-        <div class="sent-messages">
-          <p>MESSAGE 7</p><br>
-        </div>
-        <div class="received-messages">
-          <p>MESSAGE 8</p><br>
-        </div>
-        <div class="sent-messages">
-          <p>MESSAGE 9</p><br>
-        </div>
-        <div class="received-messages">
-          <p>MESSAGE 10</p><br>
-        </div>
+            <p>MESSAGE 3</p><br>
+          </div>
+          <div class="received-messages">
+            <p>MESSAGE 4</p><br>
+          </div>
+          <div class="sent-messages">
+            <p>MESSAGE 5</p><br>
+          </div>
+          <div class="received-messages">
+            <p>MESSAGE 6</p><br>
+          </div>
+          <div class="sent-messages">
+            <p>MESSAGE 7</p><br>
+          </div>
+          <div class="received-messages">
+            <p>MESSAGE 8</p><br>
+          </div>
+          <div class="sent-messages">
+            <p>MESSAGE 9</p><br>
+          </div>
+          <div class="received-messages">
+            <p>MESSAGE 10</p><br>
+          </div>
 
 
 
@@ -104,11 +138,17 @@
 
       </section>
       <!-- end main content -->
+
       <!-- footer - texting bar -->
-      <div class="bottom-box">
-        <footer>
-        </footer>
-      </div>
+
+        <div class="bottom-box">
+          <div class="text-box">
+            <i class="far fa-smile icons"></i>
+            <input placeholder="Type a message">
+            <i class="fas fa-microphone icons"></i>
+          </div>
+        </div>
+
       <!-- footer - texting bar -->
 
     </main>
@@ -117,6 +157,10 @@
 
   </div>
   <!-- end wrapper -->
+
+  <!-- script -->
+  <script src="js/script.js" charset="utf-8"></script>
+  <!-- end script -->
 </body>
 
 </html>
