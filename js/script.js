@@ -2,12 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
 
-    selectedContactArray: [
-
-    ],
-    selectedContactText: '',
-
-    contacts: [{
+      contacts: [{
         name: 'Michele',
         avatar: '_1',
         visible: true,
@@ -88,12 +83,7 @@ var app = new Vue({
       },
     ],
     methods: {
-      selectedContact() {
-        if (true) {
 
-        }
-
-      }
     }
 
   }
