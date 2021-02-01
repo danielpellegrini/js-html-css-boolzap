@@ -79,21 +79,24 @@
         <!-- top nav -->
         <div class="top-nav">
 
-          <div class="middle-nav-left">
-            <div class="contacts-container">
-              <div class="contacts-content">
-                <img :src="'img/avatar' + contacts[0].avatar + '.jpg'">
-                <span>{{contacts[0].name}}</span>
-              </div>
+          <!-- selected contact on top -->
+          <div class="selected-contact">
+            <img :src="'img/avatar' + contacts[0].avatar + '.jpg'">
+            <div class="details-selected-contact">
+              <span>{{contacts[0].name}}</span>
+              <span>Ultimo accesso oggi alle</span>
             </div>
           </div>
+          <!-- end selected contact on top -->
 
-
+          <!-- right side icons -->
           <div class="icons">
             <i class="fas fa-search"></i>
             <i class="fas fa-paperclip"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
+          <!-- end right side icons -->
+
         </div>
         <!-- end top nav -->
 
@@ -101,35 +104,41 @@
         <div class="messages-section">
 
           <div class="sent-messages">
-            <p>MESSAGE 1</p><br>
-          </div>
-          <div class="received-messages">
-            <p>MESSAGE 2</p><br>
+            <span>{{contacts[0].messages[0].text}}</span>
+            <span>{{contacts[3].messages[0].date}}</span>
           </div>
           <div class="sent-messages">
-            <p>MESSAGE 3</p><br>
+            <span>{{contacts[0].messages[1].text}}</span>
+            <span>{{contacts[3].messages[1].date}}</span>
           </div>
           <div class="received-messages">
-            <p>MESSAGE 4</p><br>
+            <span>{{contacts[0].messages[2].text}}</span>
+            <span>{{contacts[3].messages[1].date}}</span>
+          </div>
+          <!-- <div class="sent-messages">
+            <p>Message 3</p><br>
+          </div>
+          <div class="received-messages">
+            <p>Message 4</p><br>
           </div>
           <div class="sent-messages">
-            <p>MESSAGE 5</p><br>
+            <p>Message 5</p><br>
           </div>
           <div class="received-messages">
-            <p>MESSAGE 6</p><br>
+            <p>Message 6</p><br>
           </div>
           <div class="sent-messages">
-            <p>MESSAGE 7</p><br>
+            <p>Message 7</p><br>
           </div>
           <div class="received-messages">
-            <p>MESSAGE 8</p><br>
+            <p>Message 8</p><br>
           </div>
           <div class="sent-messages">
-            <p>MESSAGE 9</p><br>
+            <p>Message 9</p><br>
           </div>
           <div class="received-messages">
-            <p>MESSAGE 10</p><br>
-          </div>
+            <p>Message 10</p><br>
+          </div> -->
 
 
 
@@ -141,13 +150,15 @@
 
       <!-- footer - texting bar -->
 
-        <div class="bottom-box">
-          <div class="text-box">
-            <i class="far fa-smile icons"></i>
+      <div class="bottom-box">
+        <div class="text-box">
+          <i class="far fa-smile icons"></i>
+
             <input placeholder="Type a message">
-            <i class="fas fa-microphone icons"></i>
-          </div>
+
+          <i class="fas fa-microphone icons"></i>
         </div>
+      </div>
 
       <!-- footer - texting bar -->
 
