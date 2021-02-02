@@ -119,7 +119,7 @@
         <div class="text-box">
           <i class="far fa-smile icons"></i>
 
-            <input placeholder="Type a message">
+            <input @keyup.enter="addNewMessage" v-model="newMessage" placeholder="Type a message">
 
           <i class="fas fa-microphone icons"></i>
         </div>

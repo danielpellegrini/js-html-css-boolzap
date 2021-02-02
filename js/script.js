@@ -2,7 +2,9 @@ var app = new Vue({
   el: '#app',
   data: {
     chatIndex: 0,
-
+    newMessage:'',
+    newMessageArray: [
+    ],
     contacts: [
       {
         name: 'Michele',
@@ -85,10 +87,20 @@ var app = new Vue({
       },
     ]
   },
-  
+
   methods: {
     clickedChat: function(index) {
       this.chatIndex = index;
+    },
+    addNewMessage: function() {
+
+      let date = new Date().toLocaleString();
+      const newItem = {date: date, text: this.newMessage, status: 'sent'};
+      if (this.newMessage.length > 0) {
+        this.contacts[this.chatIndex].messages.push(newItem);
+        this.newMessageArray.push(this.newMessage);
+        this.newMessage = '';
+      }
     }
   }
 });
