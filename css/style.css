@@ -181,6 +181,9 @@ main {
 
 .messages-section {
   margin: 0 auto;
+  /* position: absolute; */
+  /* bottom: 20px; */
+  margin-top: 40%;
   width: 70%;
   overflow-y: auto;
   display: flex;
@@ -194,19 +197,18 @@ main {
   height: 80px;
   border-radius: 10px;
   align-self: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .received-messages {
-  margin-top: 100px;
   background-color: #FFFFFF;
   width: 250px;
   height: 80px;
   border-radius: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   align-self: flex-start;
   display: flex;
   flex-direction: column;

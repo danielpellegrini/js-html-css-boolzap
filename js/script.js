@@ -83,17 +83,13 @@ var app = new Vue({
           }
         ],
       },
-    ],
-    methods: {
-      activeDot: function(index) {
-        if (index !== this.chatIndex) {
-          return 'fas fa-circle'
-        } else {
-          return 'fas fa-circle active'
-        }
-      }
+    ]
+  },
+  
+  methods: {
+    clickedChat: function(index) {
+      this.chatIndex = index;
     }
-
   }
 });
 

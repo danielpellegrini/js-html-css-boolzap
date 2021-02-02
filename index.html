@@ -61,7 +61,7 @@
 
         <!-- contacts -->
         <div class="middle-nav-left">
-          <div class="contacts-container" v-for="item in contacts">
+          <div class="contacts-container" v-for="(item, index) in contacts" @click="clickedChat(index)">
             <div class="contacts-content">
               <img :src="'img/avatar' + item.avatar + '.jpg'">
               <span>{{item.name}}</span>
@@ -81,10 +81,10 @@
 
           <!-- selected contact on top -->
           <div class="selected-contact">
-            <img :src="'img/avatar' + contacts[0].avatar + '.jpg'">
+            <img :src="'img/avatar' + contacts[chatIndex].avatar + '.jpg'">
             <div class="details-selected-contact">
-              <span>{{contacts[0].name}}</span>
-              <span>Ultimo accesso oggi alle</span>
+              <span>{{contacts[chatIndex].name}}</span>
+              <span>Last seen today at</span>
             </div>
           </div>
           <!-- end selected contact on top -->
@@ -115,7 +115,6 @@
       <!-- end main content -->
 
       <!-- footer - texting bar -->
-
       <div class="bottom-box">
         <div class="text-box">
           <i class="far fa-smile icons"></i>
@@ -125,7 +124,6 @@
           <i class="fas fa-microphone icons"></i>
         </div>
       </div>
-
       <!-- footer - texting bar -->
 
     </main>
