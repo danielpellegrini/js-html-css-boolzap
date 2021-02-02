@@ -93,15 +93,25 @@ var app = new Vue({
       this.chatIndex = index;
     },
     addNewMessage: function() {
-
       let date = new Date().toLocaleString();
-      const newItem = {date: date, text: this.newMessage, status: 'sent'};
+      const newSent = {date: date, text: this.newMessage, status: 'sent'};
+      console.log(newSent);
       if (this.newMessage.length > 0) {
-        this.contacts[this.chatIndex].messages.push(newItem);
+        this.contacts[this.chatIndex].messages.push(newSent);
         this.newMessageArray.push(this.newMessage);
         this.newMessage = '';
-      }
-    }
+      };
+      setTimeout(() => {
+        let date = new Date().toLocaleString();
+        function answerTxt() {
+          return 'ok'
+        };
+        const newAnswer = {date: date, text: answerTxt(), status: 'received'};
+        console.log(newAnswer);
+        this.contacts[this.chatIndex].messages.push(newAnswer);
+        this.newMessageArray.push(this.newAnswer);
+      }, 1000)
+    },
   }
 });
 
