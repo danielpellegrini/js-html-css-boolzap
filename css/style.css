@@ -192,10 +192,12 @@ main {
   background-color: #DBF8BE;
   width: 250px;
   height: 80px;
-  line-height: 50px;
   border-radius: 10px;
   align-self: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .received-messages {
@@ -203,10 +205,12 @@ main {
   background-color: #FFFFFF;
   width: 250px;
   height: 80px;
-  line-height: 50px;
   border-radius: 10px;
   margin-bottom: 100px;
   align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sent-messages>span:last-child, .received-messages>span:last-child {
@@ -215,13 +219,10 @@ main {
   display: block;
   text-align: right;
   padding-right: 10px;
-  line-height: 1em;
 }
 .sent-messages>span:first-child, .received-messages>span:first-child {
-  padding-left: 10px;
+  padding: 15px 0 0 10px;
   display: block;
-  padding-right: 10px;
-  line-height: 4em;
 }
 
 
@@ -239,8 +240,7 @@ main {
   top: 0;
   display: flex;
   justify-content: space-between;
-  /* z-index: 100000; */
-  overflow: hidden;
+  z-index: 1;
 }
 
 .details-selected-contact {

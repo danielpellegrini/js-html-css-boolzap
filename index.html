@@ -103,44 +103,10 @@
         <!-- sent and received messages -->
         <div class="messages-section">
 
-          <div class="sent-messages">
-            <span>{{contacts[0].messages[0].text}}</span>
-            <span>{{contacts[3].messages[0].date}}</span>
+          <div :class="item.status === 'received' ? 'received-messages' : 'sent-messages'" v-for="item in contacts[chatIndex].messages">
+            <span>{{item.text}}</span>
+            <span>{{item.date}}</span>
           </div>
-          <div class="sent-messages">
-            <span>{{contacts[0].messages[1].text}}</span>
-            <span>{{contacts[3].messages[1].date}}</span>
-          </div>
-          <div class="received-messages">
-            <span>{{contacts[0].messages[2].text}}</span>
-            <span>{{contacts[3].messages[1].date}}</span>
-          </div>
-          <!-- <div class="sent-messages">
-            <p>Message 3</p><br>
-          </div>
-          <div class="received-messages">
-            <p>Message 4</p><br>
-          </div>
-          <div class="sent-messages">
-            <p>Message 5</p><br>
-          </div>
-          <div class="received-messages">
-            <p>Message 6</p><br>
-          </div>
-          <div class="sent-messages">
-            <p>Message 7</p><br>
-          </div>
-          <div class="received-messages">
-            <p>Message 8</p><br>
-          </div>
-          <div class="sent-messages">
-            <p>Message 9</p><br>
-          </div>
-          <div class="received-messages">
-            <p>Message 10</p><br>
-          </div> -->
-
-
 
         </div>
         <!-- end sent and received messages -->

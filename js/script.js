@@ -1,8 +1,10 @@
 var app = new Vue({
   el: '#app',
   data: {
+    chatIndex: 0,
 
-      contacts: [{
+    contacts: [
+      {
         name: 'Michele',
         avatar: '_1',
         visible: true,
@@ -83,7 +85,13 @@ var app = new Vue({
       },
     ],
     methods: {
-
+      activeDot: function(index) {
+        if (index !== this.chatIndex) {
+          return 'fas fa-circle'
+        } else {
+          return 'fas fa-circle active'
+        }
+      }
     }
 
   }
