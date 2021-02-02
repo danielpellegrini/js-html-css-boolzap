@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -18,6 +19,7 @@ a {
   background-color: #DADBD5;
   color: inherit;
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -45,7 +47,8 @@ main {
   background-color: #FFFFFF;
   color: inherit;
   float: left;
-  width: 30%;
+  clear: both;
+  /* min-width: ; */
   height: 100%;
 }
 
@@ -93,7 +96,6 @@ main {
   background-color: #FFFFFF;
   border-radius: 50%;
   display: flex;
-
 }
 
 .icon-notify-container>i {
@@ -169,19 +171,21 @@ main {
 
 /* END LEFT NAV */
 
-/* MESSAGES SECTION */
+/* MAIN CONTENT  */
 #content {
   background-image: url(../img/mine.jpg);
   background-repeat: repeat;
   background-color: #E5DCD5;
   color: inherit;
-  height: calc(100% - 100px);
+  height: calc(100% - 190px);
   overflow-y: auto;
 }
+/* END MAIN CONTENT  */
 
+/* MESSAGES SECTION */
 .messages-section {
   margin: 0 auto;
-  margin-top: 120px;
+  margin-top: 20px;
   width: 70%;
   overflow-y: auto;
   display: flex;
@@ -189,38 +193,36 @@ main {
   align-items: center;
 }
 
-.sent-messages {
-  background-color: #DBF8BE;
+.messages-section>div {
   width: 250px;
   height: 80px;
   border-radius: 10px;
-  align-self: flex-end;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.sent-messages {
+  background-color: #DBF8BE;
+  align-self: flex-end;
 }
 
 .received-messages {
   background-color: #FFFFFF;
-  width: 250px;
-  height: 80px;
-  border-radius: 10px;
-  margin-bottom: 20px;
   align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-.sent-messages>span:last-child, .received-messages>span:last-child {
+.sent-messages>span:last-child,
+.received-messages>span:last-child {
   opacity: .5;
   font-size: .8em;
   display: block;
   text-align: right;
   padding-right: 10px;
 }
-.sent-messages>span:first-child, .received-messages>span:first-child {
+.sent-messages>span:first-child,
+.received-messages>span:first-child {
   padding: 15px 0 0 10px;
   display: block;
 }
@@ -230,17 +232,17 @@ main {
 
 /* TOP NAV */
 .top-nav {
-  width: 70%;
   height: 90px;
   line-height: 90px;
   padding: 0 15px;
   background-color: #EAEAEA;
   color: inherit;
-  position: absolute;
+  position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .details-selected-contact {
@@ -262,11 +264,8 @@ main {
 
 /* END TOP NAV */
 
-/* MAIN CONTENT  */
-/* END MAIN CONTENT  */
 
 /* TEXT BAR */
-
 
 .bottom-box {
   height: 100px;
@@ -313,12 +312,12 @@ main {
 
 @media screen and (max-width: 1200px) {
   .text-box>input {
-    /* width: 75%;
+    width: 75%;
     line-height: 75px;
     font-size: 1.5em;
     outline-width: 1px;
     border-radius: 5px;
-    padding-left: 15px; */
+    padding-left: 15px;
     /* margin: 0 20px; */
   }
 }
@@ -326,36 +325,36 @@ main {
 
 @media screen and (max-width: 992px) {
   .text-box>input {
-    /* width: 65%;
+    width: 65%;
     line-height: 75px;
     font-size: 1.5em;
     outline-width: 1px;
     border-radius: 5px;
-    padding-left: 15px; */
+    padding-left: 15px;
     /* margin: 0 20px; */
   }
 }
 
 @media screen and (max-width: 768px) {
   .text-box>input {
-    /* width: 50%;
+    width: 50%;
     line-height: 65px;
     font-size: 1.2em;
     outline-width: 1px;
     border-radius: 5px;
-    padding-left: 15px; */
+    padding-left: 15px;
     /* margin: 0 20px; */
   }
 }
 
 @media screen and (max-width: 576px) {
   .text-box>input {
-    /* width: 40%;
+    width: 40%;
     line-height: 60px;
     font-size: .8em;
     outline-width: 1px;
     border-radius: 5px;
-    padding-left: 15px; */
+    padding-left: 15px;
     /* margin: 0 20px; */
   }
 }

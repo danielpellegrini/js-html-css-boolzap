@@ -73,33 +73,32 @@
       </nav>
       <!-- end left nav -->
 
+      <!-- top nav -->
+      <div class="top-nav">
+
+        <!-- selected contact on top -->
+        <div class="selected-contact">
+          <img :src="'img/avatar' + contacts[chatIndex].avatar + '.jpg'">
+          <div class="details-selected-contact">
+            <span>{{contacts[chatIndex].name}}</span>
+            <span>Last seen today at</span>
+          </div>
+        </div>
+        <!-- end selected contact on top -->
+
+        <!-- right side icons -->
+        <div class="icons">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <!-- end right side icons -->
+
+      </div>
+      <!-- end top nav -->
+
       <!-- main content -->
       <section id="content">
-
-        <!-- top nav -->
-        <div class="top-nav">
-
-          <!-- selected contact on top -->
-          <div class="selected-contact">
-            <img :src="'img/avatar' + contacts[chatIndex].avatar + '.jpg'">
-            <div class="details-selected-contact">
-              <span>{{contacts[chatIndex].name}}</span>
-              <span>Last seen today at</span>
-            </div>
-          </div>
-          <!-- end selected contact on top -->
-
-          <!-- right side icons -->
-          <div class="icons">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <!-- end right side icons -->
-
-        </div>
-        <!-- end top nav -->
-
         <!-- sent and received messages -->
         <div class="messages-section">
 
@@ -110,7 +109,6 @@
 
         </div>
         <!-- end sent and received messages -->
-
       </section>
       <!-- end main content -->
 
