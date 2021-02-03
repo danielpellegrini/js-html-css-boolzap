@@ -54,14 +54,14 @@
         <div class="top-nav-left">
           <div class="search-field">
             <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search or start new chat" value="">
+            <input v-model="search" @input='filterContact()' type="text" placeholder="Search or start new chat" value="">
           </div>
         </div>
         <!-- end search chat -->
 
         <!-- contacts -->
         <div class="middle-nav-left">
-          <div class="contacts-container" v-for="(item, index) in contacts" @click="clickedChat(index)">
+          <div class="contacts-container" v-for="(item, index) in contacts" @click="clickedChat(index)" v-if='item.visible'>
             <div class="contacts-content">
               <img :src="'img/avatar' + item.avatar + '.jpg'">
               <span>{{item.name}}</span>
@@ -81,7 +81,7 @@
           <img :src="'img/avatar' + contacts[chatIndex].avatar + '.jpg'">
           <div class="details-selected-contact">
             <span>{{contacts[chatIndex].name}}</span>
-            <span>Last seen today at</span>
+            <span>Last seen {{contactLastSeen(chatIndex)}}</span>
           </div>
         </div>
         <!-- end selected contact on top -->

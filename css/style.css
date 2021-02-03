@@ -152,6 +152,11 @@ main {
   border-bottom: 1px solid #EAEAEA;
 }
 
+.contacts-container:hover {
+  background-color: #EFEFEF;
+  cursor: pointer;
+}
+
 .contacts-content>img, .selected-contact>img {
   height: 4em;
   border-radius: 50%;
@@ -194,13 +199,15 @@ main {
 }
 
 .messages-section>div {
-  width: 250px;
-  height: 80px;
+  width: 300px;
+  height: 90px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: space-between;
+  word-break: break-all;
 }
 
 .sent-messages {
@@ -213,18 +220,19 @@ main {
   align-self: flex-start;
 }
 
+.sent-messages>span:first-child,
+.received-messages>span:first-child {
+  /* padding: 15px 0 0 10px; */
+  display: block;
+}
+
 .sent-messages>span:last-child,
 .received-messages>span:last-child {
   opacity: .5;
-  font-size: .8em;
+  font-size: .7em;
   display: block;
   text-align: right;
   padding-right: 10px;
-}
-.sent-messages>span:first-child,
-.received-messages>span:first-child {
-  padding: 15px 0 0 10px;
-  display: block;
 }
 
 

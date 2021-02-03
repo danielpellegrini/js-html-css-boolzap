@@ -1,10 +1,11 @@
+// let date = new Date().toLocaleString();
 var app = new Vue({
   el: '#app',
   data: {
     chatIndex: 0,
-    newMessage:'',
-    newMessageArray: [
-    ],
+    search: '',
+    newMessage: '',
+    newMessageArray: [],
     contacts: [
       {
         name: 'Michele',
@@ -94,23 +95,59 @@ var app = new Vue({
     },
     addNewMessage: function() {
       let date = new Date().toLocaleString();
-      const newSent = {date: date, text: this.newMessage, status: 'sent'};
+      const newSent = {
+        date: date,
+        text: this.newMessage,
+        status: 'sent'
+      };
       console.log(newSent);
       if (this.newMessage.length > 0) {
         this.contacts[this.chatIndex].messages.push(newSent);
         this.newMessageArray.push(this.newMessage);
         this.newMessage = '';
+        setTimeout(() => {
+          let date = new Date().toLocaleString();
+
+          function answerTxt() {
+            return 'ok'
+          };
+          const newAnswer = {
+            date: date,
+            text: answerTxt(),
+            status: 'received'
+          };
+          console.log(newAnswer);
+          this.contacts[this.chatIndex].messages.push(newAnswer);
+          this.newMessageArray.push(this.newAnswer);
+        }, 1000)
       };
-      setTimeout(() => {
-        let date = new Date().toLocaleString();
-        function answerTxt() {
-          return 'ok'
-        };
-        const newAnswer = {date: date, text: answerTxt(), status: 'received'};
-        console.log(newAnswer);
-        this.contacts[this.chatIndex].messages.push(newAnswer);
-        this.newMessageArray.push(this.newAnswer);
-      }, 1000)
+    },
+    contactLastSeen: function(index) {
+      const messages = this.contacts[index].messages;
+      const lastIndex = messages.length - 1;
+      const lastDate = messages[lastIndex].date;
+      return lastDate;
+    },
+    filterContact: function() {
+      if (this.search !== '') {
+        this.contacts.forEach(item => {
+          // lowercase
+          const name = item.name.toLowerCase()
+          const searchString = this.search.toLowerCase()
+          // if contact's name starts with its first letter than display it
+          if (name.startsWith(searchString)) {
+            item.visible = true;
+          } else { // otherwise hide it and hide the whole others contacts
+            item.visible = false;
+          }
+        });
+
+      } else {
+        this.contacts.forEach(item => { //deleting the name from the search bar
+          item.visible = true;          //the whole contacts will appear again
+        });
+      }
+
     },
   }
 });
