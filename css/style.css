@@ -32,7 +32,7 @@ a {
 /* MAIN CONTAINER */
 main {
   position: absolute;
-  width: 70%;
+  width: 90%;
   height: 95%;
   align-self: center;
 }
@@ -150,6 +150,7 @@ main {
 .contacts-container {
   padding: 15px;
   border-bottom: 1px solid #EAEAEA;
+  word-break: keep-all;
 }
 
 .contacts-container:hover {
@@ -160,83 +161,36 @@ main {
 .contacts-content>img, .selected-contact>img {
   height: 4em;
   border-radius: 50%;
-  vertical-align: middle;
+  float: left;
 }
 
 .contacts-content>span {
   vertical-align: top;
   margin-left: 10px;
+  display: inline;
+}
+
+.contacts-content> small {
+  opacity: .5;
+}
+
+.contacts-content> small:first-of-type {
+  float: right;
+}
+
+.contacts-content> small:last-of-type {
+  display: block;
+  padding-left: 10px;
 }
 
 .middle-nav-left {
   overflow-y: auto;
 }
 
+
 /* end contacts */
 
 /* END LEFT NAV */
-
-/* MAIN CONTENT  */
-#content {
-  background-image: url(../img/mine.jpg);
-  background-repeat: repeat;
-  background-color: #E5DCD5;
-  color: inherit;
-  height: calc(100% - 190px);
-  overflow-y: auto;
-}
-/* END MAIN CONTENT  */
-
-/* MESSAGES SECTION */
-.messages-section {
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 70%;
-  overflow-y: auto;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.messages-section>div {
-  width: 300px;
-  height: 90px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  word-break: break-all;
-}
-
-.sent-messages {
-  background-color: #DBF8BE;
-  align-self: flex-end;
-}
-
-.received-messages {
-  background-color: #FFFFFF;
-  align-self: flex-start;
-}
-
-.sent-messages>span:first-child,
-.received-messages>span:first-child {
-  /* padding: 15px 0 0 10px; */
-  display: block;
-}
-
-.sent-messages>span:last-child,
-.received-messages>span:last-child {
-  opacity: .5;
-  font-size: .7em;
-  display: block;
-  text-align: right;
-  padding-right: 10px;
-}
-
-
-/* END MESSAGES SECTION */
 
 /* TOP NAV */
 .top-nav {
@@ -251,6 +205,11 @@ main {
   justify-content: space-between;
   z-index: 1;
   overflow-x: hidden;
+}
+
+.selected-contact {
+  display: flex;
+  align-items: center;
 }
 
 .details-selected-contact {
@@ -272,6 +231,101 @@ main {
 
 /* END TOP NAV */
 
+/* MAIN CONTENT  */
+#content {
+  background-image: url(../img/mine.jpg);
+  background-repeat: repeat;
+  background-color: #E5DCD5;
+  color: inherit;
+  height: calc(100% - 190px);
+  overflow-y: auto;
+}
+/* END MAIN CONTENT  */
+
+/* MESSAGES SECTION */
+.messages-section {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 70%;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  overflow: visible;
+}
+
+.messages-section>div {
+  position: relative;
+  min-width: 100px;
+  max-width: 600px;
+  min-height: 50px;
+  max-height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  word-break: break-all;
+  border-radius: .4em;
+}
+
+.sent-messages:after {
+	content: '';
+	position: absolute;
+	right: 28px;
+	top: 22px;
+	width: 0;
+	height: 3px;
+	border: 20px solid transparent;
+	border-left-color: #DBF8BE;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -22px;
+	margin-right: -44px;
+}
+.received-messages:after {
+  content: '';
+	position: absolute;
+	left: 28px;
+	top: 22px;
+	width: 0;
+	height: 3px;
+	border: 20px solid transparent;
+	border-right-color: #FFFFFF;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -22px;
+	margin-left: -44px;
+}
+
+.sent-messages {
+  overflow: visible;
+  background-color: #DBF8BE;
+  align-self: flex-end;
+}
+
+.received-messages {
+  overflow: visible;
+  background-color: #FFFFFF;
+  align-self: flex-start;
+}
+
+.sent-messages>span:first-child,
+.received-messages>span:first-child {
+  display: block;
+}
+
+.sent-messages>span:last-child,
+.received-messages>span:last-child {
+  opacity: .5;
+  font-size: .7em;
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+}
+
+
+/* END MESSAGES SECTION */
 
 /* TEXT BAR */
 
@@ -311,8 +365,6 @@ main {
   color: #6D7575;
 }
 /* END TEXT BAR */
-
-
 
 
 

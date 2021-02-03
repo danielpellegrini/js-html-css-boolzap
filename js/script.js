@@ -147,8 +147,13 @@ var app = new Vue({
           item.visible = true;          //the whole contacts will appear again
         });
       }
-
     },
+    lastMessage: function(index) {
+      const messages = this.contacts[index].messages;
+      const lastIndex = messages.length - 1;
+      const lastDate = messages[lastIndex].text;
+      return lastDate;
+    }
   }
 });
 
