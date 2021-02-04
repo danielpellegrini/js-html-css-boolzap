@@ -109,7 +109,8 @@ var app = new Vue({
       const newSent = {
         date: date,
         text: this.newMessage,
-        status: 'sent'
+        status: 'sent',
+        toggle: 'hidden'
       };
       console.log(newSent);
       if (this.newMessage.length > 0) {
@@ -120,12 +121,13 @@ var app = new Vue({
           let date = new Date().toLocaleString();
 
           function answerTxt() {
-            return 'ok'
+            return 'Ok'
           };
           const newAnswer = {
             date: date,
             text: answerTxt(),
-            status: 'received'
+            status: 'received',
+            toggle: 'hidden'
           };
           console.log(newAnswer);
           this.contacts[this.chatIndex].messages.push(newAnswer);
@@ -170,6 +172,10 @@ var app = new Vue({
       ( user.toggle == 'hidden' ) ? user.toggle = 'active' : user.toggle = 'hidden';
 
     },
+    deleteMessage(index){
+      const message = this.contacts[this.chatIndex].messages;
+      message.splice(index, 1);
+    }
   }
 });
 

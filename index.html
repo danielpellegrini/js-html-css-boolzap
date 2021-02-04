@@ -123,7 +123,7 @@
             <div class="dropdown-menu" :class="item.toggle">
               <ul>
                 <li>Message info</li>
-                <li>Delete message</li>
+                <li @click="deleteMessage(index)">Delete message</li>
               </ul>
             </div>
           </div>

@@ -340,6 +340,10 @@ main {
   padding: 0 10px;
 }
 
+.dropdown-menu>ul>li {
+  cursor: pointer;
+}
+
 .active {
   z-index: 1;
 }
@@ -351,7 +355,10 @@ main {
 .fa-angle-down {
  float: right;
  padding-right: 20px;
- opacity: .6;
+ opacity: .4;
+}
+.fa-angle-down:hover {
+ opacity: .8;
 }
 
 
