@@ -4,6 +4,7 @@ var app = new Vue({
   data: {
     chatIndex: 0,
     search: '',
+    isActive: false,
     newMessage: '',
     newMessageArray: [],
     contacts: [
@@ -153,7 +154,7 @@ var app = new Vue({
       const lastIndex = messages.length - 1;
       const lastDate = messages[lastIndex].text;
       return lastDate;
-    }
+    },
   }
 });
 

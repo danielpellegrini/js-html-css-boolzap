@@ -251,6 +251,7 @@ main {
   flex-flow: column;
   align-items: center;
   overflow: visible;
+  position: relative;
 }
 
 .messages-section>div {
@@ -301,6 +302,7 @@ main {
   overflow: visible;
   background-color: #DBF8BE;
   align-self: flex-end;
+  /* position: relative;   */
 }
 
 .received-messages {
@@ -321,6 +323,30 @@ main {
   display: block;
   text-align: right;
   padding-right: 10px;
+}
+
+.dropdown-menu {
+  background-color: #FFFFFF;
+  line-height: 3em;
+  z-index: -1;
+  position: absolute;
+  box-shadow: rgba(150, 150, 150, 0.08) 0px 0px 4px 0px, rgba(100, 100, 100, 0.8) 0px 8px 16px 0px;
+  top: 30px;
+  right: 20px;
+}
+
+.dropdown-menu>ul {
+  padding: 0 10px;
+}
+
+.active {
+  z-index: 1;
+}
+
+.fa-angle-down {
+ float: right;
+ padding-right: 20px;
+ opacity: .6;
 }
 
 
@@ -397,7 +423,6 @@ main {
     display: flex;
   }
 }
-
 
 @media screen and (max-width: 992px) {
   .text-box>input {
