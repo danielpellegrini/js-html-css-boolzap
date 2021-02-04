@@ -113,13 +113,14 @@
           <div v-for="(item, index) in contacts[chatIndex].messages"
                :class="item.status === 'received' ? 'received-messages' : 'sent-messages'" >
 
-            <div class="drop" @click="isActive = !isActive">
+            <div class="drop" @click="toggleDropdown(index)">
                   <i class="fas fa-angle-down"></i>
             </div>
 
             <span>{{item.text}}</span>
             <span>{{item.date}}</span>
-            <div class="dropdown-menu" :class="{active: isActive}">
+
+            <div class="dropdown-menu" :class="item.toggle">
               <ul>
                 <li>Message info</li>
                 <li>Delete message</li>

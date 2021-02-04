@@ -311,13 +311,13 @@ main {
   align-self: flex-start;
 }
 
-.sent-messages>span:first-child,
-.received-messages>span:first-child {
+.sent-messages>span:first-of-type,
+.received-messages>span:first-of-type {
   display: block;
 }
 
-.sent-messages>span:last-child,
-.received-messages>span:last-child {
+.sent-messages>span:last-of-type,
+.received-messages>span:last-of-type {
   opacity: .5;
   font-size: .7em;
   display: block;
@@ -328,7 +328,8 @@ main {
 .dropdown-menu {
   background-color: #FFFFFF;
   line-height: 3em;
-  z-index: -1;
+  width: 150px;
+  border-radius: 5px;
   position: absolute;
   box-shadow: rgba(150, 150, 150, 0.08) 0px 0px 4px 0px, rgba(100, 100, 100, 0.8) 0px 8px 16px 0px;
   top: 30px;
@@ -341,6 +342,10 @@ main {
 
 .active {
   z-index: 1;
+}
+
+.hidden {
+  z-index: -1;
 }
 
 .fa-angle-down {
