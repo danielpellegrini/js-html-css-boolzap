@@ -549,3 +549,122 @@ main {
   }
 
 }
+@media screen and (max-width: 360px) {
+  .wrapper {
+    display: inline-block;
+  }
+  .beyond-top {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-box>input {
+    width: 70%;
+    line-height: 60px;
+    font-size: 1em;
+    outline-width: 1px;
+    border-radius: 5px;
+    padding-left: 15px;
+    /* margin: 0 20px; */
+  }
+
+  .left-nav {
+    display: flex;
+    flex-flow: column;
+    background-color: #FFFFFF;
+    color: inherit;
+    float: left;
+    clear: both;
+    width: 150px;
+    height: 100%;
+    word-break: break-all;
+  }
+
+  .notify-container {
+    display: none;
+  }
+
+  .top-nav-left {
+    display: none;
+  }
+
+  .top-nav {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .top-nav-left:nth-of-type(2){
+    justify-content: center;
+  }
+  .middle-nav-left {
+    position: relative;
+    top: 10px;
+    height: 500px;
+  }
+
+  .icons {
+    font-size: .7em;
+  }
+  .navbar-icons {
+    width: 50%;
+  }
+
+  .text-box .fa-smile,
+  .text-box .fa-microphone {
+    font-size: 1.5em;
+  }
+
+  .contacts-content>img {
+    width: 2em;
+  }
+  .contacts-content>span {
+    font-size: .8em;
+  }
+  .contacts-content>small {
+   font-size: .7em;
+  }
+
+  .icon-notify-container {
+    width: 50px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+  }
+
+  .icon-notify-container>i {
+    font-size: 1em;
+    align-self: center;
+    padding-left: 8px;
+    color: #8EDAFC;
+  }
+
+  .details-selected-contact>span:last-of-type {
+    font-size: .6em;
+  }
+  .contacts-content> small:first-of-type {
+    display: inline-block;
+    float: none;
+    padding-left: 10px;
+  }
+
+  #content {
+    position: relative;
+    top: 70px;
+    height: calc(100% - 150px);
+  }
+  .bottom-box {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    bottom: 80px;
+    line-height: 80px;
+  }
+
+}

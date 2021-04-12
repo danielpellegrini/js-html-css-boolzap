@@ -97,6 +97,60 @@ var app = new Vue({
           }
         ],
       },
+      {
+        name: 'Luisa',
+        avatar: '_4',
+        visible: true,
+        messages: [{
+            date: '10/01/2020 15:30:55',
+            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            status: 'sent',
+            toggle: 'hidden'
+          },
+          {
+            date: '10/01/2020 15:50:00',
+            text: 'Si, ma preferirei andare al cinema',
+            status: 'received',
+            toggle: 'hidden'
+          }
+        ],
+      },
+      {
+        name: 'Luisa',
+        avatar: '_4',
+        visible: true,
+        messages: [{
+            date: '10/01/2020 15:30:55',
+            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            status: 'sent',
+            toggle: 'hidden'
+          },
+          {
+            date: '10/01/2020 15:50:00',
+            text: 'Si, ma preferirei andare al cinema',
+            status: 'received',
+            toggle: 'hidden'
+          }
+        ],
+      },
+      {
+        name: 'Luisa',
+        avatar: '_4',
+        visible: true,
+        messages: [{
+            date: '10/01/2020 15:30:55',
+            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            status: 'sent',
+            toggle: 'hidden'
+          },
+          {
+            date: '10/01/2020 15:50:00',
+            text: 'Si, ma preferirei andare al cinema',
+            status: 'received',
+            toggle: 'hidden'
+          }
+        ],
+      },
     ]
   },
 
