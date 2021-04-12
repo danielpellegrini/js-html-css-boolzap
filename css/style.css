@@ -549,7 +549,7 @@ main {
   }
 
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .wrapper {
     display: inline-block;
   }
@@ -599,20 +599,30 @@ main {
     top: 0;
   }
 
+  /* .search-chat::placeholder {
+    font-size: .5em;
+  } */
+
   .top-nav-left:nth-of-type(2){
     justify-content: center;
   }
+  .top-nav-left:nth-of-type(3){
+    position: relative;
+    top: 60px;
+    left: 0;
+  }
+
   .middle-nav-left {
     position: relative;
-    top: 10px;
-    height: 500px;
+    top: 40px;
+    height: 80%;
   }
 
   .icons {
     font-size: .7em;
   }
   .navbar-icons {
-    width: 50%;
+    width: 65%;
   }
 
   .text-box .fa-smile,
@@ -647,7 +657,7 @@ main {
   }
 
   .details-selected-contact>span:last-of-type {
-    font-size: .6em;
+    font-size: .5em;
   }
   .contacts-content> small:first-of-type {
     display: inline-block;
