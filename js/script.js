@@ -80,7 +80,7 @@ var app = new Vue({
         ],
       },
       {
-        name: 'Luisa',
+        name: 'Marco',
         avatar: '_4',
         visible: true,
         messages: [{
@@ -98,18 +98,18 @@ var app = new Vue({
         ],
       },
       {
-        name: 'Luisa',
-        avatar: '_4',
+        name: 'Pippo',
+        avatar: '_5',
         visible: true,
         messages: [{
-            date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            date: '10/04/2021 15:30:55',
+            text: 'Hai visto il nuovo film della Marvel?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            date: '10/04/2021 15:50:00',
+            text: 'No! Quando è uscito?!',
             status: 'received',
             toggle: 'hidden'
           }
@@ -117,35 +117,47 @@ var app = new Vue({
       },
       {
         name: 'Luisa',
-        avatar: '_4',
+        avatar: '_6',
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            text: 'Supercalifragilistichespiralidoso',
             status: 'sent',
             toggle: 'hidden'
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            text: 'Si, lo penso anche io!',
             status: 'received',
             toggle: 'hidden'
           }
         ],
       },
       {
-        name: 'Luisa',
-        avatar: '_4',
+        name: 'Gigi',
+        avatar: '_7',
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            text: 'Lo sai chi ho visto ieri?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            text: 'Oh chi??',
+            status: 'received',
+            toggle: 'hidden'
+          },
+          {
+            date: '10/01/2020 16:50:00',
+            text: 'La tu mamma',
+            status: 'sent',
+            toggle: 'hidden'
+          },
+          {
+            date: '10/01/2020 17:00:00',
+            text: '-_-"',
             status: 'received',
             toggle: 'hidden'
           }
