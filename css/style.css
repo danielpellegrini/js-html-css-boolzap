@@ -14,6 +14,8 @@ a {
   opacity: .5;
 }
 
+
+
 /* END UTILITIES CLASSES */
 .wrapper {
   background-color: #DADBD5;
@@ -405,6 +407,8 @@ main {
 
 
 
+
+
 /* --- MEDIA QUERIES --- */
 
 @media screen and (max-width: 1200px) {
@@ -579,9 +583,10 @@ main {
     color: inherit;
     float: left;
     clear: both;
-    width: 150px;
-    height: 100%;
-    word-break: break-all;
+    width: 100vw;
+    height: 100vh;
+    word-break: break-all; 
+    
   }
 
   .notify-container {
@@ -668,7 +673,7 @@ main {
   #content {
     position: relative;
     top: 70px;
-    height: calc(100% - 150px);
+    height: 100%;
   }
   .bottom-box {
     position: relative;
@@ -676,6 +681,9 @@ main {
     height: 80px;
     bottom: 80px;
     line-height: 80px;
+  }
+  .hidden {
+    display: none;
   }
 
 }

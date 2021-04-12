@@ -21,7 +21,7 @@
     <main>
 
       <!-- left nav -->
-      <nav class="left-nav">
+      <nav class="left-nav" :class="{hidden: hide}">
 
         <!-- user name -->
         <div class="top-nav-left">
@@ -67,7 +67,7 @@
                v-for="(item, index) in contacts"
                @click="clickedChat(index)"
                v-if='item.visible'>
-            <div class="contacts-content">
+            <div @click="toggleUsers()" class="contacts-content">
               <img :src="'img/avatar' + item.avatar + '.jpg'">
               <span>{{item.name}}</span>
               <small>{{contactLastSeen(index)}}</small>
@@ -85,7 +85,7 @@
 
         <!-- selected contact on top -->
         <div class="selected-contact">
-          <img :src="'img/avatar' + contacts[chatIndex].avatar + '.jpg'">
+          <img @click="toggleUsers()" :src="'img/avatar' + contacts[chatIndex].avatar + '.jpg'">
           <div class="details-selected-contact">
             <span>{{contacts[chatIndex].name}}</span>
             <span>Last seen {{contactLastSeen(chatIndex)}}</span>

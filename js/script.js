@@ -5,6 +5,8 @@ var app = new Vue({
     chatIndex: 0,
     search: '',
     newMessage: '',
+    hide: false,
+    active: false,
     newMessageArray: [],
     contacts: [
       {
@@ -167,10 +169,10 @@ var app = new Vue({
   },
 
   methods: {
-    clickedChat: function(index) {
+    clickedChat(index) {
       this.chatIndex = index;
     },
-    addNewMessage: function() {
+    addNewMessage() {
       let date = new Date().toLocaleString();
       const newSent = {
         date: date,
@@ -201,13 +203,13 @@ var app = new Vue({
         }, 1000)
       };
     },
-    contactLastSeen: function(index) {
+    contactLastSeen(index) {
       const messages = this.contacts[index].messages;
       const lastIndex = messages.length - 1;
       const lastDate = messages[lastIndex].date;
       return lastDate;
     },
-    filterContact: function() {
+    filterContact() {
       if (this.search !== '') {
         this.contacts.forEach(item => {
           // lowercase
@@ -227,7 +229,7 @@ var app = new Vue({
         });
       }
     },
-    lastMessage: function(index) {
+    lastMessage(index) {
       const messages = this.contacts[index].messages;
       const lastIndex = messages.length - 1;
       const lastDate = messages[lastIndex].text;
@@ -237,6 +239,9 @@ var app = new Vue({
       const user = this.contacts[this.chatIndex].messages[index];
       ( user.toggle == 'hidden' ) ? user.toggle = 'active' : user.toggle = 'hidden';
 
+    },
+    toggleUsers() {
+      this.hide = !this.hide;
     },
     deleteMessage(index){
       const message = this.contacts[this.chatIndex].messages;
