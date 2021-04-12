@@ -549,7 +549,7 @@ main {
   }
 
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
   .wrapper {
     display: inline-block;
   }
@@ -620,7 +620,8 @@ main {
     font-size: 1.5em;
   }
 
-  .contacts-content>img {
+  .contacts-content>img,
+  .selected-contact>img {
     width: 2em;
   }
   .contacts-content>span {
