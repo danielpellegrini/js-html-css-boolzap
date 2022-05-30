@@ -14,20 +14,20 @@ var app = new Vue({
         avatar: '_1',
         visible: true,
         messages: [{
-            date: '10/01/2020 15:30:55',
-            text: 'Hai portato a spasso il cane?',
+            date: '10/01/2020 15:30',
+            text: 'Did you take the dog for a walk?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'Ricordati di dargli da mangiare',
+            date: '10/01/2020 15:50',
+            text: 'Don\' forget to feed it!',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 16:15:22',
-            text: 'Tutto fatto!',
+            date: '10/01/2020 16:15',
+            text: 'All done!',
             status: 'received',
             toggle: 'hidden'
           }
@@ -38,19 +38,19 @@ var app = new Vue({
         avatar: '_2',
         visible: true,
         messages: [{
-            date: '20/03/2020 16:30:00',
+            date: '20/03/2020 16:30',
             text: 'Ciao come stai?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '20/03/2020 16:30:55',
+            date: '20/03/2020 16:30',
             text: 'Bene grazie! Stasera ci vediamo?',
             status: 'received',
             toggle: 'hidden'
           },
           {
-            date: '20/03/2020 16:35:00',
+            date: '20/03/2020 16:35',
             text: 'Mi piacerebbe ma devo andare a fare la spesa.',
             status: 'sent',
             toggle: 'hidden'
@@ -58,25 +58,19 @@ var app = new Vue({
         ],
       },
       {
-        name: 'Samuele',
+        name: 'Max',
         avatar: '_3',
         visible: true,
         messages: [{
-            date: '28/03/2020 10:10:40',
-            text: 'La Marianna va in campagna',
+            date: '28/03/2020 10:10',
+            text: 'Hey Daniel, wie war denn der Urlaub?',
             status: 'received',
             toggle: 'hidden'
           },
           {
-            date: '28/03/2020 10:20:10',
-            text: 'Sicuro di non aver sbagliato chat?',
+            date: '28/03/2020 10:20',
+            text: 'Gräßlich! Im Hotel hatte ich Zimmernummer hundert. Und vom Türschild ist die Eins abgefallen!',
             status: 'sent',
-            toggle: 'hidden'
-          },
-          {
-            date: '28/03/2020 16:15:22',
-            text: 'Ah scusa!',
-            status: 'received',
             toggle: 'hidden'
           }
         ],
@@ -86,13 +80,13 @@ var app = new Vue({
         avatar: '_4',
         visible: true,
         messages: [{
-            date: '10/01/2020 15:30:55',
+            date: '10/01/2020 15:30',
             text: 'Lo sai che ha aperto una nuova pizzeria?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 15:50:00',
+            date: '10/01/2020 15:50',
             text: 'Si, ma preferirei andare al cinema',
             status: 'received',
             toggle: 'hidden'
@@ -104,13 +98,13 @@ var app = new Vue({
         avatar: '_5',
         visible: true,
         messages: [{
-            date: '10/04/2021 15:30:55',
+            date: '10/04/2021 15:30',
             text: 'Hai visto il nuovo film della Marvel?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/04/2021 15:50:00',
+            date: '10/04/2021 15:50',
             text: 'No! Quando è uscito?!',
             status: 'received',
             toggle: 'hidden'
@@ -118,18 +112,18 @@ var app = new Vue({
         ],
       },
       {
-        name: 'Luisa',
+        name: 'Erika',
         avatar: '_6',
         visible: true,
         messages: [{
-            date: '10/01/2020 15:30:55',
-            text: 'Supercalifragilistichespiralidoso',
+            date: '10/01/2020 15:30',
+            text: 'Kann ein Känguru höher als ein Haus springen?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'Si, lo penso anche io!',
+            date: '10/01/2020 15:50',
+            text: 'Ja! Weil ein Haus nicht springen kann.',
             status: 'received',
             toggle: 'hidden'
           }
@@ -140,26 +134,32 @@ var app = new Vue({
         avatar: '_7',
         visible: true,
         messages: [{
-            date: '10/01/2020 15:30:55',
-            text: 'Lo sai chi ho visto ieri?',
+            date: '10/01/2020 15:30',
+            text: 'Was machst du?',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 15:50:00',
-            text: 'Oh chi??',
+            date: '10/01/2020 15:35',
+            text: 'Ich lerne Italienisch!',
             status: 'received',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 16:50:00',
-            text: 'La tu mamma',
+            date: '10/01/2020 15:36',
+            text: 'und du?',
+            status: 'received',
+            toggle: 'hidden'
+          },
+          {
+            date: '10/01/2020 16:50',
+            text: 'Oh, schön für dich!',
             status: 'sent',
             toggle: 'hidden'
           },
           {
-            date: '10/01/2020 17:00:00',
-            text: '-_-"',
+            date: '10/01/2020 16:51',
+            text: 'Io sto mangiando un panino :)',
             status: 'received',
             toggle: 'hidden'
           }
