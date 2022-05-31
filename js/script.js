@@ -160,7 +160,7 @@ var app = new Vue({
           {
             date: '10/01/2020 16:51',
             text: 'Io sto mangiando un panino :)',
-            status: 'received',
+            status: 'sent',
             toggle: 'hidden'
           }
         ],
